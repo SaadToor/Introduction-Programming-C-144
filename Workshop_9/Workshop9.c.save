@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Fraction
+{
+	int numerator;
+	int denominator;
+	int totalDenuminator;c
+	int totalNumerator;
+};
+
+void enter(struct Fraction* f);
+void simplify(struct Fraction* f);
+void display(struct Fraction* f);
+
+int main(void)
+{
+	struct Fraction f;
+
+	printf("Fraction Simplifier\n");
+	printf("===================\n");
+
+	enter(&f);
+	simplify(&f);
+	display(&f);
+
+	return 0;
+}
+void enter(struct Fraction* f)
+{
+	printf("Numerator:   ");
+	scanf("%d",&f->numerator);
+	printf("Denominator: ");
+	scanf("%d",&f->denominator);
+}
+void simplify(struct Fraction* f)
+{
+	if(f->numerator > f->denominator)
+	{
+		f->totalNumerator = (f->numerator)/(f->numerator);
+		f->totalDenuminator = (f->numerator)/(f->denominator);
+	}
+	else
+	{
+		f->totalDenuminator = (f->denominator)/(f->denominator);
+		f->totalNumerator = (f->denominator)/(f->numerator);
+	}
+}
+void display(struct Fraction* f)
+{
+	printf("%d / %d\n",f->totalDenuminator,f->totalNumerator);
+}

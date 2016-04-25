@@ -1,0 +1,103 @@
+//Saad Toor
+
+#include <stdio.h>
+
+int main(void)
+{
+	int socialInsuranceNumber;
+
+
+	printf("Please enter your Social Insurance Number or press 0 to quit:\n");
+	scanf("%d",&socialInsuranceNumber);
+
+	while(socialInsuranceNumber != 0)
+	{
+
+	if(socialInsuranceNumber != 0)
+	{
+	int secondLast;
+	int forthLast;
+	int sixthLast;
+	int eighthLast;
+	int totalSL;
+	int totalFL;
+	int totalSXL;
+	int totalEL;
+	int totalSplitSL;
+	int totalSplitSLL;
+	int totalSplitFL;
+	int totalSplitFLL;
+	int totalSplitSXL;
+	int totalSplitSXLL;
+	int totalSplitEL;
+	int totalSplitELL;
+	int totalTotalSplit;
+	int aOne;
+	int aTwo;
+	int aThree;
+	int aFour;
+	int aTotal;	
+	int totalSplitTotal;
+	int highNumber;
+	int checkDigit;
+	int checkTotal;
+	int subTract;
+
+	checkDigit=7;
+
+	secondLast=(socialInsuranceNumber/10)%10;
+	forthLast=(socialInsuranceNumber/1000)%10;
+	sixthLast=(socialInsuranceNumber/100000)%10;
+	eighthLast=(socialInsuranceNumber/10000000)%10;
+	totalSL=secondLast+secondLast;
+	totalFL=forthLast+forthLast;
+	totalSXL=sixthLast+sixthLast;
+	totalEL=eighthLast+eighthLast;
+	totalSplitSL=(totalSL/1)%10;
+	totalSplitSLL=(totalSL/10)%10;
+	totalSplitFL=(totalFL/1)%10;
+	totalSplitFLL=(totalFL/10)%10;
+	totalSplitSXL=(totalSXL/1)%10;
+	totalSplitSXLL=(totalSXL/10)%10;
+	totalSplitEL=(totalEL/1)%10;
+	totalSplitELL=(totalEL/10)%10;
+	totalTotalSplit=totalSplitSL+totalSplitSLL+totalSplitFL+totalSplitFLL+totalSplitSXL+totalSplitSXLL+totalSplitEL+totalSplitELL;	
+	aOne=(socialInsuranceNumber/100)%10;
+	aTwo=(socialInsuranceNumber/10000)%10;
+	aThree=(socialInsuranceNumber/1000000)%10;
+	aFour=(socialInsuranceNumber/100000000)%10;
+	aTotal=aOne+aTwo+aThree+aFour;
+	totalSplitTotal=totalTotalSplit+aTotal;
+
+	highNumber=(totalSplitTotal/10)%10;
+	checkTotal=(highNumber+1)*10;
+	subTract=checkTotal-totalSplitTotal;
+
+	printf("%d\n",checkTotal);
+
+
+	if(subTract == checkDigit)
+	{
+	
+	printf("This is a valid SIN\n");	
+
+	}
+	else
+	{
+	printf("This is not a valid SIN\n");
+	}
+
+	break;
+
+	}
+	
+	else
+	{
+	printf("Have a nice day\n");
+	}
+	
+	}
+
+	return 0;
+
+}

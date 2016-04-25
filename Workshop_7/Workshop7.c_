@@ -1,0 +1,30 @@
+//Saad Toor
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int barCode;
+	int price;
+	int quan;
+	
+	printf("Grocery Store Inventory\n");
+	printf("=======================\n");
+
+	printf("Barcode  :  ");
+	scanf("%d",&barCode);
+
+	
+	while(barCode > 0)
+	{
+		printf("Barcode  :  ");
+		scanf("%d",&barCode);
+		printf("Price    :  ");
+		scanf("%d",&price);
+		printf("Quantity :  ");
+		scanf("%d",&quan);
+	}
+
+	return 0;
+}

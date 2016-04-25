@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int simplify(int *number, int *denom);
+
+int main(void)
+{
+	int *pNumerator;
+	int *pDenominator;
+
+	int simplifyFunction;
+
+	printf("Fraction Simplifier\n");
+	printf("===================\n");
+	printf("Numerator: ");
+	scanf("%d",&pNumerator);
+	printf("Denominator: ");
+	scanf("%d",&pDenominator);
+
+	simplifyFunction=simplify(pNumerator,pDenominator);	
+
+	printf("%d/%d = \n",pNumerator,pDenominator);
+
+	return 0;
+}
+int simplify(int *number, int *denom)
+{
+	int total;
+	
+	if(number%2 == 0 || denom%2 == 0)
+	{
+		total=number/denom;
+	}
+	else
+	{
+		printf("%d/%d = %d/%d",number,denom,number,denom);
+	}
+
+	return total;
+}
